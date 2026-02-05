@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikos Nikolaidis</title>
+  <link rel="stylesheet" href="/src/output.css" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ========== Header ========== -->
+  <header class="w-full px-6 py-4 shadow-md">
+    <nav class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Left: Name/Logo -->
+      <div class="text-2xl font-bold"><a href="index.html"> Nikos Nikolaidis</a></div>
+
+      <!-- Right: Desktop Icons -->
+      <ul class="hidden md:flex gap-6 items-center text-2xl">
+        <li><a href="https://mail.google.com/" target="_blank"><i class="ri-mail-line hover:text-green-700"></i></a>
+        </li>
+        <li><a href="https://github.com/nikosnick13/" target="_blank"><i
+              class="ri-github-fill hover:text-green-700"></i></a></li>
+        <li><a href="#" target="_blank"><i class="ri-profile-line hover:text-green-700"></i></a></li>
+      </ul>
+
+      <!--  Mobile Menu Button -->
+      <button id="mobile-toggle" class="md:hidden text-3xl" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="ri-menu-line"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu-->
+    <div id="mobile-menu" class="md:hidden hidden px-6 py-2">
+      <ul class="flex flex-col gap-3 text-lg">
+        <li><a href="https://mail.google.com/" target="_blank"><i class="ri-mail-line hover:text-green-700"></i></a> </li>  
+        <li><a href="https://github.com/nikosnick13/" target="_blank"><i class="ri-github-fill hover:text-green-700"></i></a></li>
+        <li><a href="#" target="_blank"><i class="ri-profile-line hover:text-green-700"></i></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========== Main ========== -->
+  <main class="max-w-7xl mx-auto px-6 py-10 flex">
+
+    <div
+      class="terminalContainer inline-block rounded-lg w-full max-w-3xl h-[500px] overflow-y-auto bg-black text-[#00ff00] shadow-lg">
+      <div class="terminalBar">
+        <span class="bar_button bg-[#ff5f56]"></span>
+        <span class="bar_button bg-[#ffbd2e]"></span>
+        <span class="bar_button bg-[#27c93f]"></span>
+      </div>
+      <div class="instaction px-6">
+        <p> Ahoy! Welcome to my digital ship CyberPirate,&#127988;&#8205;&#9760;&#65039; <br>
+          Type 'help' to see available commands.
+        </p>
+      </div>
+      <div class="terminal_output_area px-6 py-4 flex flex-col gap-1 text-[#00ff00] font-mono text-sm"></div>
+    </div>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="100 text-gray-500 py-6 mt-10">
+    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+      &copy; 2025 Nikos Nikolaidis. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ========== Mobile Toggle Script ========== -->
+  <script>
+    const toggle = document.getElementById("mobile-toggle");
+const menu = document.getElementById("mobile-menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
+
+  </script>
+
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
